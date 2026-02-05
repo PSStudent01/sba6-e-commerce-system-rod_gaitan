@@ -11,7 +11,18 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@types/node": "^25.1.0",
+    "@types/node": "^25.2.0",
     "typescript": "^5.9.3"
-  }
+  },
+  "dependencies": {
+    "undici-types": "^7.16.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PSStudent01/e-commerce-system-rod_gaitan.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PSStudent01/e-commerce-system-rod_gaitan/issues"
+  },
+  "homepage": "https://github.com/PSStudent01/e-commerce-system-rod_gaitan#readme"
 }
