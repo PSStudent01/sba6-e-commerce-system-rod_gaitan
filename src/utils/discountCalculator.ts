@@ -38,6 +38,6 @@ console.log(calculateDiscount());
     return price * (discountPercentage / 100) //this line calculates the percentage for teh user 
 } 
 
-console.log(calculateDiscount()); 
+console.log(calculateDiscount(100, 10)); 
 
 
