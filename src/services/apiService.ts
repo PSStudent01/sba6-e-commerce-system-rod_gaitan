@@ -24,7 +24,7 @@ export interface ProductData {  // to establish type annotation for each propert
     category: string;
 }
 
-async function fetchProducts(): Promise<ProductData[]> {  //function signature says that this function will eventually return an array (ProductData) of product objects.
+export async function fetchProducts(): Promise<ProductData[]> {  //function signature says that this function will eventually return an array (ProductData) of product objects.
     try {    // wraps the API request to handle errors for it. Wraps the API request in try to catch and manage errors
             const response = await fetch("https://dummyjson.com/products") //making an API request to fetch the products from 'dummyjson.com'. Awaits until returning a Promise.
 
@@ -44,15 +44,6 @@ async function fetchProducts(): Promise<ProductData[]> {  //function signature s
         console.error("Error fetching products:", error);
         throw error;
     }
-
-
-
-
-
-
-
-
-
 }  
 
 
@@ -63,9 +54,3 @@ async function fetchProducts(): Promise<ProductData[]> {  //function signature s
 
 
 
-
-
-
-
-//Implementing apiService.ts:
-//1) added 'export' to the interface 'ProductData'
