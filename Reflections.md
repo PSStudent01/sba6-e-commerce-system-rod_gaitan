@@ -1,0 +1,9 @@
+Reflection Document:
+1) How you implemented TypeScript features and OOP principles?
+I used TypeScript’s type annotation, interfaces, modules, and async/await (rather than the   setTimeout;  resolve, reject on previous labs) features. I implemented OOP principles by defining a ‘Product’ class with methods (displayDetails()), using encapsulation (keeping methods ‘getPriceWithDiscount()’ and ‘displayDetails()’ together within class ‘Product’, and reusable utility modules (‘discountCalculator.ts’ and ‘taxCalculator.ts’).
+
+2) The challenges you encountered and how you overcame them?
+During this project, I faced several challenges. For example. At first it was confusing how to fetch API data, convert JSON to Product objects, and handle errors gracefully. To address these issues, I wrapped API calls in async/await functions with try/catch; went back to ensure the API service (apiService.ts) and a ‘CustomError’ class were properly set up for structured error handling.  Received warnings like “parameter implicitly has an 'any' type” or “module declares function but it is not exported” and how I overcame it, was by specifically defining typed parameters (prod: ProductData, product: Product) and double-checking to ensure that all imports/exports were properly assigned. I also consulted TypeScript documentation until errors were resolved.
+
+3) How you handled asynchronous operations and error management?
+I handled asynchronous operations using async/await in TypeScript. I wrapped API requests for fetching product data  within an async function (fetchProducts())  inside my ‘apiService.ts’ file, while returning typed Promises (Promise<ProductData[]>), so that the code was forced to wait for the API response before moving forward. To manage errors, I used try/catch blocks around all async calls. I also implemented a CustomError class in the errorHandler.ts file to handle specific error types, including HTTP status codes (500 more specifically).
